@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Admin Dashboard</h1>
+  <button id="logoutBtn">Logout</button>
+
+  <div id="tableContainer">
+    <table id="bookingsTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Pickup Date</th>
+          <th>Service Type</th>
+          <th>Created At</th>
+        </tr>
+      </thead>
+      <tbody id="bookingsBody">
+        <!-- Firestore data appears here -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 👇 Always put your script at the bottom, inside <body> -->
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
