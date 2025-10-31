@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rollins Laundry Services</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <div id="bookingWidgetContainer">
@@ -24,10 +24,22 @@
                 <option value="standard">Your Detergent</option>
                 <option value="deluxe">Rollins Laundry Detergent</option>
             </select>
+
+            <label for="liability">Liability & Agreement: </label>
+            <div>
+                <p>By submitting this form, I acknowledge that Rollins Laundry Service will take all reasonable care in handling my laundry. 
+                    However, I understand that the company is not responsible for any damage, shrinkage, discoloration, or loss that may occur 
+                    during the washing, drying, or transport process.    </p>
+            </div>
+            <div>
+                <input type="checkbox" id="liability" name="liability" required>
+                <span>I agree to the terms and conditions.</span>
+            </div>
+            
             <button type="submit">Submit</button>
          </form>
     </div>
-    <script type="module" src="bookingWidget.js"></script>
+    <script type="module" src="./js/bookingWidget.js"></script>
 
 </body>
 </html>
