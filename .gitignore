@@ -1,0 +1,25 @@
+# Node modules
+node_modules/
+server/node_modules/
+
+# Environment files (API keys, secrets)
+.env
+server/.env
+
+# Firebase and system cache
+.firebase/
+firebase-debug.log
+firebase-debug.*.log
+hosting.cache
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+
+# npm / lock files (optional — you can keep these if you want)
+package-lock.json
+
+# Build / temporary
+dist/
+tmp/
+.cache/
