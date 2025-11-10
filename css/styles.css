@@ -9,52 +9,64 @@
 
 body {
   font-family: 'Inter', Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
+  background: linear-gradient(180deg, #f3f6fc 0%, #ffffff 100%);
+  color: #1e1e1e;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
   padding: 20px;
   opacity: 0;
   animation: fadeIn 0.8s ease forwards;
 }
 
+/* ======================
+   HEADINGS
+====================== */
 h1 {
-  color: #2e7d32;
-  font-size: 2.5rem;
+  color: #0033A0; /* Rollins Blue */
+  font-size: 2.7rem;
   margin-bottom: 10px;
+  letter-spacing: 1px;
   animation: slideDown 0.8s ease;
 }
 
 p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
+  font-size: 1.15rem;
+  color: #333;
+  margin-bottom: 25px;
   animation: fadeIn 1.2s ease;
+  max-width: 550px;
 }
 
 /* ======================
    BUTTONS & LINKS
 ====================== */
 button, a {
-  background-color: #2e7d32;
+  background-color: #0033A0; /* Rollins Blue */
   color: #fff;
   border: none;
-  padding: 12px 24px;
+  padding: 12px 28px;
   font-size: 1rem;
   border-radius: 8px;
   cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.25s ease;
   text-decoration: none;
   display: inline-block;
+  box-shadow: 0 4px 12px rgba(0, 51, 160, 0.2);
 }
 
 button:hover, a:hover {
-  background-color: #388e3c;
+  background-color: #0055B8;
   transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(46, 125, 50, 0.2);
+  box-shadow: 0 6px 14px rgba(0, 51, 160, 0.3);
+}
+
+/* Add gold accent outline on focus */
+button:focus, a:focus {
+  outline: 3px solid #FFD100;
 }
 
 /* ======================
@@ -63,11 +75,12 @@ button:hover, a:hover {
 #bookingWidgetContainer {
   background: #ffffff;
   padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   width: 100%;
   max-width: 600px;
   margin: 40px auto;
+  border-top: 5px solid #FFD100; /* Gold accent */
   animation: fadeInUp 1s ease;
 }
 
@@ -79,6 +92,7 @@ form {
 
 label {
   font-weight: 600;
+  color: #0033A0;
   text-align: left;
 }
 
@@ -92,24 +106,22 @@ input, select {
 
 input:focus, select:focus {
   outline: none;
-  border-color: #2e7d32;
-  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.25);
+  border-color: #FFD100;
+  box-shadow: 0 0 0 3px rgba(255, 209, 0, 0.3);
 }
 
 button[type="submit"] {
   margin-top: 10px;
+  background-color: #FFD100;
+  color: #0033A0;
+  font-weight: 600;
 }
 
-/* ======================
-   SUCCESS PAGE ANIMATION
-====================== */
-h1::before {
-  content: '✅';
-  display: block;
-  font-size: 3rem;
-  margin-bottom: 10px;
-  animation: bounce 0.8s ease;
+button[type="submit"]:hover {
+  background-color: #ffda33;
 }
+
+
 
 /* ======================
    ANIMATIONS
@@ -152,15 +164,14 @@ h1::before {
   }
 
   #bookingWidgetContainer {
-    padding: 20px;
+    padding: 25px;
     margin: 20px;
   }
 }
 
 /* ======================
-   ADMIN
+   ADMIN TABLE
 ====================== */
-
 table {
   width: 90%;
   border-collapse: collapse;
@@ -173,20 +184,27 @@ table {
 
 th, td {
   padding: 12px 16px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #eee;
 }
 
 th {
-  background-color: #2e7d32;
+  background-color: #0033A0;
   color: white;
   text-align: left;
 }
 
 tr:hover {
-  background-color: #f5f5f5;
+  background-color: #f8faff;
 }
 
 #logoutBtn {
   margin-bottom: 20px;
   align-self: flex-end;
+  background-color: #FFD100;
+  color: #0033A0;
+  font-weight: 600;
+}
+
+#logoutBtn:hover {
+  background-color: #ffda33;
 }
