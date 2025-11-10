@@ -60,30 +60,45 @@ button:hover, a:hover {
 /* ======================
    BOOKING FORM
 ====================== */
-
-#bookingContent {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 2rem;
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: 1300px;
-  margin-top: 40px;
-  margin-bottom: 60px;
-}
-
-/* Keep each Calendly widget styled cleanly */
-.dual-calendars .calendly-inline-widget {
-  flex: 1 1 500px;
-  height: 630px;
+#bookingWidgetContainer {
+  background: #ffffff;
+  padding: 40px;
   border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-  background-color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin: 40px auto;
+  animation: fadeInUp 1s ease;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: 600;
+  text-align: left;
+}
+
+input, select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.3s ease;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.25);
+}
+
+button[type="submit"] {
+  margin-top: 10px;
+}
 
 /* ======================
    SUCCESS PAGE ANIMATION
